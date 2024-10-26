@@ -50,7 +50,7 @@ async def check_bots():
     log.info("[CHECK] Started periodic checks...")
     channel_current_msg = await client.get_messages(CHANNEL_ID, ids=MESSAGE_ID)
     new_message = (
-        "⚠️ **New periodic check in progress...** ⚠️\n\n" + channel_current_msg.text
+        "⚠️ **New check in progress...** ⚠️\n\n" + channel_current_msg.text
     )
     try:
         await client.edit_message(CHANNEL_ID, MESSAGE_ID, new_message)
